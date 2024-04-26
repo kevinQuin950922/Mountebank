@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 const settings = require('./settings.js');
 
 function postImposter(body) {
-    const url = `http://localhost:${settings.port}/imposters`;
+    const url = `http://127.0.0.1:${settings.port}/imposters`;
 
     return fetch(url, {
                     method:'POST',
