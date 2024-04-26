@@ -1,0 +1,19 @@
+{
+  "name": "pruebamountebank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "mountebank": "^2.9.1"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "data": {
+        "ingresoId": 1234,
+        "tiquete": {
+            "fechaRegistro": "${FECHAREGISTRO}",
+            "tiempoDesde": "${FECHADESDE}",
+            "tiempoHasta": "${FECHAHASTA}",
+            "tiempoTotal": "1 h 0 m",
+            "valor": "${VALOR}",
+            "zona": "Bolivariana",
+            "parquimetro": "Makro",
+            "impulsadorId": 298,
+            "placa": "${PLACA}",
+            "tipoTiquete": "TIEMPO PAGO",
+            "consecutivo": "27-1407",
+            "celdasOcupadas": 1,
+            "concepto": "Tasa de Uso Z.E.R.",
+            "tipoVehiculo": "Carro"
+        }
+    },
+    "isSuccess": true,
+    "message": null,
+    "codigoError": 0
+}
