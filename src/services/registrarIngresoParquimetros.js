@@ -6,13 +6,42 @@ function addService() {
     const response = respuesta;
     const ingresoId=Math.floor(Math.random() * (999999 - 1000) + 1000)
     response.data.ingresoId=ingresoId;
+    const responseBadRequest={"mensaje":"El campo placa debe estar dentro de los parametros"}
 
     const stubs = [
         {
             predicates: [ {
+                and:[
+                    {
+                            equals: {
+                            method: "POST",
+                            path: "/zer/external/ingreso/crear"
+                        }
+                    },
+                    {
+                        exists:{
+                            body:{ "placa": false } 
+                        }
+                    }
+                ]
+            }],
+            responses:[
+                {
+                    is: {
+                        statusCode: 404,
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(responseBadRequest)
+                    },
+                }
+            ]
+        },
+        {
+            predicates: [ {
                 equals: {
                     method: "POST",
-                    "path": "/zer/external/ingreso/crear"
+                    path: "/zer/external/ingreso/crear"
                 }
             }],
             responses: [

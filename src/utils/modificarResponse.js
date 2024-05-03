@@ -1,6 +1,6 @@
 const request = JSON.parse(process.env.MB_REQUEST);
-const response = JSON.parse(process.env.MB_RESPONSE)
-const dateFns = require('date-fns')
+const response = JSON.parse(process.env.MB_RESPONSE);
+const dateFns = require('date-fns');
 
 const fechaActual=new Date();
 const fechaRegistro=dateFns.format(fechaActual, "yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'");
@@ -12,6 +12,6 @@ const fechaHasta= dateFns.format(fechaActual.setMinutes(minutosAnticipado+fechaA
 response.body=response.body.replace("${FECHAREGISTRO}",fechaRegistro);
 response.body=response.body.replace("${FECHADESDE}",fechaDesde);
 response.body=response.body.replace("${FECHAHASTA}",fechaHasta);
-console.log(JSON.stringify(response))
+console.log(JSON.stringify(response));
 
 
